@@ -1,0 +1,23 @@
+{
+  "model_name": "CapeTown_Airbnb_Price_Predictor",
+  "version": "20251026_215523",
+  "model_type": "XGBoost_Regressor",
+  "training_date": "2025-10-26 21:55:23",
+  "dataset": "Inside Airbnb Cape Town",
+  "data_snapshot": "2024-09-28",
+  "performance_metrics": {
+    "cv_rmse_mean": 0.3654820905744099,
+    "cv_rmse_std": 0.0069493734477532355,
+    "cv_r2_mean": 0.8211062047505034,
+    "cv_r2_std": 0.006560918575335323,
+    "val_mape": 29.291969172024363
+  },
+  "feature_count": 164,
+  "target_variable": "log_price",
+  "framework_targets": {
+    "r2_target": 0.55,
+    "mape_target": 15.0,
+    "r2_achieved": 0.8156464678477591,
+    "mape_achieved": 29.291969172024363
+  }
+}
