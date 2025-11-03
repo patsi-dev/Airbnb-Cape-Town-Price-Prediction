@@ -149,7 +149,7 @@ In conclusion, the tuned XGBoost model performed well, explaining about 73% of p
 - Include more features that capture dynamic pricing factors, e.g., local events, holidays, competitor prices, and seasonal trends
 
 ## Deployment
-
+We deployed the tuned XGBoost model on Streamlit, building an easy-to-use web app that allows users to predict Airbnb prices in real time. The tool helps users quickly estimate listing prices, explore key pricing factors, and make informed, data-driven decisions for better market understanding.
 ## Additional Information & Research
 We applied the tuned XGBoost model, originally trained on the Cape Town Airbnb dataset, to a Kenyan Airbnb dataset using transfer learning. However, the results were disappointing, as the model failed to generalize well to the new market. This poor performance likely stems from differences in market dynamics, pricing behavior, and data distribution between Cape Town and Kenya. To further explore this, we trained a new model from scratch using the Kenyan dataset. Although it performed well on the training data, it showed signs of severe overfitting, with performance dropping significantly on validation and test sets. This indicates that the model learned patterns specific to the training data rather than general trends.
 
