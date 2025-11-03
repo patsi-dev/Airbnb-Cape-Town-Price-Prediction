@@ -58,6 +58,17 @@ Some of the columns include:
 - `reviews_per_month`: Review frequency
 
 Some Exploratory Data Analysis (EDA) was done
+<p align = 'center'>Univariate Analysis</p>
+
+![Analysis 4](https://github.com/patsi-dev/Airbnb-Cape-Town-Price-Prediction/blob/ivy/images/Screenshot%20(139).png)
+
+<p align = 'center'>Bivariate Analysis</p>
+
+![Analysis 5](https://github.com/patsi-dev/Airbnb-Cape-Town-Price-Prediction/blob/ivy/images/Screenshot%20(141).png)
+
+<p align = 'center'>Linearity</p>
+
+![Analysis 6](https://github.com/patsi-dev/Airbnb-Cape-Town-Price-Prediction/blob/ivy/images/Screenshot%20(140).png)
 
 ## Data Preparation
 The dataset underwent several cleaning and transformation steps to ensure quality and reliability before modeling.
@@ -69,8 +80,13 @@ Missing values were carefully filled, and a few rows were dropped due to the sma
 No duplicate records were found, confirming that each listing in the dataset was unique.
 
 **Outlier Treatment:**
-Outliers were capped since some were genuine (reflecting real, high-value listings), while others were errors or extreme values that could distort model performance.
+<p align = 'center'>Outliers</p>
 
+![Analysis 2](https://github.com/patsi-dev/Airbnb-Cape-Town-Price-Prediction/blob/ivy/images/Screenshot%20(143).png)
+Outliers were capped since some were genuine (reflecting real, high-value listings), while others were errors or extreme values that could distort model performance.
+<p align = 'center'> Price outliers (Before Vs. After)</p>
+
+![Analysis 3](https://github.com/patsi-dev/Airbnb-Cape-Town-Price-Prediction/blob/ivy/images/Screenshot%20(142).png)
 **Feature engineering** involved creating geospatial features, including distance to major landmarks such as the V&A Waterfront, Table Mountain, and nearby beaches, host-based features, including host experience level, responsiveness, and superhost status, were included to reflect trust and reliability factors influencing price, among other features. 
 
 ## Modelling
@@ -119,6 +135,9 @@ The tuned XGBoost Regressor, identified as the best-performing model, was evalua
 - Test Set: RMSE (actual) = 1941.24, R2 = 0.73, MAPE = 23.12%
 
 These results indicate that the model performs very well on the training data and maintains solid predictive accuracy on unseen data. The R2 score of 0.73 on the test set shows that about 73% of the variation in Airbnb prices can be explained by the model’s features. While the validation and test errors are higher than the training error, the difference is reasonable, suggesting the model generalizes well and avoids overfitting. The MAPE of around 23% means that, on average, the model’s predictions are within 23% of the actual Airbnb prices.
+<p align = 'center'>Evaluation on the Testing set</p>
+
+![Analysis 1](https://github.com/patsi-dev/Airbnb-Cape-Town-Price-Prediction/blob/ivy/images/Screenshot%20(144).png)
 
 Overall, the tuned XGBoost model demonstrates reliable performance and provides meaningful insights into the factors influencing Airbnb pricing.
 
