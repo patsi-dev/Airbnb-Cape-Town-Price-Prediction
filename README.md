@@ -75,6 +75,7 @@ Outliers were capped since some were genuine (reflecting real, high-value listin
 
 ## Modelling
 We tested five different models to find the one that best predicts Airbnb prices in Cape Town. Each model has its own way of learning from data and making predictions.
+We split the data into 3 parts: training, validation, and testing set.
 ### **1. Linear Regression**
 This is the simplest model. It looks for straight-line relationships between the features and the price. It’s fast and easy to understand, but in this case, it didn’t work well.
 - R2: -248664552725744.84. Performed worse than just guessing the average price.
@@ -105,3 +106,25 @@ This model works similarly to XGBoost, building trees step by step, where each n
 - RMSE: 0.376. Moderate error, fairly close predictions.
 - MAPE: 27.4%. Predictions were around 27% off on average.
 Conclusion: A strong model with good performance. It was slightly less accurate than XGBoost, but with some fine-tuning, it could reach similar results.
+
+Both the XGBoost Regressor and Gradient Boosting Regressor were tuned to improve their performance. After tuning, XGBoost achieved the best results, showing higher accuracy and lower error compared to the other models. We also experimented with a simple neural network, but the results were poor. The model struggled to learn meaningful patterns from the data and performed much worse than the tree-based models. In the end, XGBoost was chosen as the final model for predicting Airbnb prices in Cape Town due to its strong accuracy, consistency, and ability to handle complex data relationships effectively.
+
+## Evaluation
+The testing set was used here.
+The tuned XGBoost Regressor, identified as the best-performing model, was evaluated on the training, validation, and test sets. The model showed strong performance and good generalization ability across all datasets.
+
+**Performance Summary:**<br>
+- Training Set: RMSE (actual) = 1006.31, R2 = 0.93, MAPE = 11.52%
+- Validation Set: RMSE (actual) = 2039.22, R2 = 0.70, MAPE = 23.73%
+- Test Set: RMSE (actual) = 1941.24, R2 = 0.73, MAPE = 23.12%
+
+These results indicate that the model performs very well on the training data and maintains solid predictive accuracy on unseen data. The R2 score of 0.73 on the test set shows that about 73% of the variation in Airbnb prices can be explained by the model’s features. While the validation and test errors are higher than the training error, the difference is reasonable, suggesting the model generalizes well and avoids overfitting. The MAPE of around 23% means that, on average, the model’s predictions are within 23% of the actual Airbnb prices.
+
+Overall, the tuned XGBoost model demonstrates reliable performance and provides meaningful insights into the factors influencing Airbnb pricing.
+
+## Conclusion
+In conclusion, the tuned XGBoost model performed well, explaining about 73% of price changes and keeping good accuracy across all datasets. With an average error of around 23%, it gives useful pricing suggestions and highlights important factors like location, property type, and amenities. Overall, it meets the project’s goal of providing smart, data-based insights to improve Airbnb pricing in Cape Town.
+## Recommendations
+- Retrain the model periodically as Airbnb listings and demand patterns change.
+- Use feedback from host adoption to refine predictions, focusing on reducing the MAPE further below 20%.
+- Include more features that capture dynamic pricing factors, e.g., local events, holidays, competitor prices, and seasonal trends
