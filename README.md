@@ -147,3 +147,10 @@ In conclusion, the tuned XGBoost model performed well, explaining about 73% of p
 - Retrain the model periodically as Airbnb listings and demand patterns change.
 - Use feedback from host adoption to refine predictions, focusing on reducing the MAPE further below 20%.
 - Include more features that capture dynamic pricing factors, e.g., local events, holidays, competitor prices, and seasonal trends
+
+## Deployment
+
+## Additional Information & Research
+We applied the tuned XGBoost model, originally trained on the Cape Town Airbnb dataset, to a Kenyan Airbnb dataset using transfer learning. However, the results were disappointing, as the model failed to generalize well to the new market. This poor performance likely stems from differences in market dynamics, pricing behavior, and data distribution between Cape Town and Kenya. To further explore this, we trained a new model from scratch using the Kenyan dataset. Although it performed well on the training data, it showed signs of severe overfitting, with performance dropping significantly on validation and test sets. This indicates that the model learned patterns specific to the training data rather than general trends.
+
+Overall, these results suggest that the Kenyan dataset needs additional preprocessing, better feature engineering, or more data to improve generalization. Future work could include collecting more representative samples, integrating external factors such as tourism trends or location-specific events, and fine-tuning model regularization to reduce overfitting.
