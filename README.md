@@ -1,13 +1,9 @@
 # Airbnb-Cape-Town-Price-Prediction
 ## Business Understanding
-Travelers using Airbnb in Cape Town often face difficulties finding fair and consistent prices for accommodation. The city’s tourism scene changes throughout the year, especially during peak seasons. Prices can rise sharply, while in quieter months, rates drop unpredictably. Different neighborhoods also have their own unique attractions and price ranges, which makes comparing options even more confusing.
-As a result, many clients end up paying more than the true value of their stay or miss out on affordable and high-quality options. The lack of pricing transparency and consistency creates frustration for travelers trying to plan their trips and manage their budgets. This project seeks to address that problem by improving how prices are determined, ensuring that clients can access more accurate, fair, and reliable accommodation rates that reflect real market conditions in Cape Town.
+Airbnb hosts in Cape Town often struggle to set fair and consistent prices for their listings. The city’s diverse neighborhoods, varying property features, and competition make it hard to know what rates are appropriate. This can lead to prices that don’t match the true value of the stay, either being too high and discouraging bookings or too low and reducing earnings. This project aims to help hosts determine fair, data-driven prices that reflect real market conditions, while also giving guests access to more transparent and reliable accommodation rates.
 
 **Main Objective**: To develop an accurate and interpretable machine learning system to predict optimal Airbnb listing prices in Cape Town, providing hosts with data-driven pricing recommendations and insights.
 ### Stakeholder Value
-- **Airbnb Clients:**
-Gain access to fairer and more accurate accommodation prices, helping them make better booking decisions.
-
 - **Airbnb Hosts:**
 Benefit from data-driven insights that can potentially increase revenue by 15-25% through optimized pricing strategies.
 
