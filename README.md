@@ -91,31 +91,26 @@ We split the data into 3 parts: training, validation, and testing set.
 ### **1. Linear Regression**
 This is the simplest model. It looks for straight-line relationships between the features and the price. It’s fast and easy to understand, but in this case, it didn’t work well.
 - R2: -248664552725744.84. Performed worse than just guessing the average price.
-- RMSE: Extremely high. Predictions were far from actual values.
 - MAPE: Infinite. Caused by division errors or very small actual prices.
 Conclusion: The model failed to capture the pricing patterns and gave very poor results.
 ### **2. Decision Tree Regressor**
 This model splits the data into smaller groups by asking a series of “yes” or “no” questions based on different features. It can find non-linear relationships and is easy to visualize.
 - R2: 0.665. Explained about 67% of the variation in prices.
-- RMSE: 0.418. Predictions were off by about 42% on average.
 - MAPE: 30.8%. Predictions were around 30% off from real prices.
 Conclusion: A decent starting point. The model learned the data fairly well but was not very precise and tended to overfit.
 ### **3. Random Forest Regressor**
 This model combines many decision trees to make better predictions. Each tree gives a small vote, and the average result becomes the final prediction. This helps improve accuracy and reduce overfitting.
 - R2: 0.705. Explained about 71% of the variation.
-- RMSE: 0.392. Errors were smaller, showing closer predictions.
 - MAPE: 28.4%. Average error dropped, improving accuracy.
 Conclusion: A strong and reliable model that handled complex data patterns well and gave consistent results.
 ### **4. XGBoost Regressor**
 This is an advanced and powerful model that builds trees one after another, each time learning from the previous mistakes. It’s fast, efficient, and often produces very accurate results.
 - R2: 0.758. Explained about 76% of the variation.
-- RMSE: 0.356. Lowest error, with predictions very close to actual prices.
 - MAPE: 25.9%. Predictions were about 26% off on average.
 Conclusion: The best-performing model. XGBoost handled complex relationships extremely well and gave the most accurate and reliable results.
 ### **5. Gradient Boosting Regressor**
 This model works similarly to XGBoost, building trees step by step, where each new tree fixes the errors of the previous ones.
 - R2: 0.729. Explained about 73% of the variation.
-- RMSE: 0.376. Moderate error, fairly close predictions.
 - MAPE: 27.4%. Predictions were around 27% off on average.
 Conclusion: A strong model with good performance. It was slightly less accurate than XGBoost, but with some fine-tuning, it could reach similar results.
 
@@ -126,9 +121,9 @@ The testing set was used here.
 The tuned XGBoost Regressor, identified as the best-performing model, was evaluated on the training, validation, and test sets. The model showed strong performance and good generalization ability across all datasets.
 
 **Performance Summary:**<br>
-- Training Set: RMSE (actual) = 1006.31, R2 = 0.93, MAPE = 11.52%
-- Validation Set: RMSE (actual) = 2039.22, R2 = 0.70, MAPE = 23.73%
-- Test Set: RMSE (actual) = 1941.24, R2 = 0.73, MAPE = 23.12%
+- Training Set: R2 = 0.93, MAPE = 11.52%
+- Validation Set: R2 = 0.70, MAPE = 23.73%
+- Test Set: R2 = 0.73, MAPE = 23.12%
 
 These results indicate that the model performs very well on the training data and maintains solid predictive accuracy on unseen data. The R2 score of 0.73 on the test set shows that about 73% of the variation in Airbnb prices can be explained by the model’s features. While the validation and test errors are higher than the training error, the difference is reasonable, suggesting the model generalizes well and avoids overfitting. The MAPE of around 23% means that, on average, the model’s predictions are within 23% of the actual Airbnb prices.
 <p align = 'center'>Evaluation on the Testing set</p>
@@ -146,6 +141,8 @@ In conclusion, the tuned XGBoost model performed well, explaining about 73% of p
 
 ## Deployment
 We deployed the tuned XGBoost model on Streamlit, building an easy-to-use web app that allows users to predict Airbnb prices in real time. The tool helps users quickly estimate listing prices, explore key pricing factors, and make informed, data-driven decisions for better market understanding.
+Below is the deployment link:<br>
+[Deployment Streamlit](https://dqklmgcovprk2xwvxh2vty.streamlit.app/)
 ## Additional Information & Research
 We applied the tuned XGBoost model, originally trained on the Cape Town Airbnb dataset, to a Kenyan Airbnb dataset using transfer learning. However, the results were disappointing, as the model failed to generalize well to the new market. This poor performance likely stems from differences in market dynamics, pricing behavior, and data distribution between Cape Town and Kenya. To further explore this, we trained a new model from scratch using the Kenyan dataset. Although it performed well on the training data, it showed signs of severe overfitting, with performance dropping significantly on validation and test sets. This indicates that the model learned patterns specific to the training data rather than general trends.
 
