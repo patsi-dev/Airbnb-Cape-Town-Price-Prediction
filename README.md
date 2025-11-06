@@ -128,7 +128,7 @@ The tuned XGBoost Regressor, identified as the best-performing model, was evalua
 These results indicate that the model performs very well on the training data and maintains solid predictive accuracy on unseen data. The R2 score of 0.73 on the test set shows that about 73% of the variation in Airbnb prices can be explained by the model’s features. While the validation and test errors are higher than the training error, the difference is reasonable, suggesting the model generalizes well and avoids overfitting. The MAPE of around 23% means that, on average, the model’s predictions are within 23% of the actual Airbnb prices.
 <p align = 'center'>Evaluation on the Testing set</p>
 
-![Analysis 1](https://github.com/patsi-dev/Airbnb-Cape-Town-Price-Prediction/blob/ivy/images/Screenshot%20(144).png)
+![Analysis 1](https://github.com/patsi-dev/Airbnb-Cape-Town-Price-Prediction/blob/ivy/images/Screenshot%20(146).png)
 
 Overall, the tuned XGBoost model demonstrates reliable performance and provides meaningful insights into the factors influencing Airbnb pricing.
 
