@@ -1,4 +1,5 @@
 # Airbnb-Cape-Town-Price-Prediction
+You can access the live version of this project here: **[Live Deployment](https://dqklmgcovprk2xwvxh2vty.streamlit.app/)**
 ## Business Understanding
 Airbnb hosts in Cape Town often struggle to set fair and consistent prices for their listings. The city’s diverse neighborhoods, varying property features, and competition make it hard to know what rates are appropriate. This can lead to prices that don’t match the true value of the stay, either being too high and discouraging bookings or too low and reducing earnings. This project aims to help hosts determine fair, data-driven prices that reflect real market conditions, while also giving guests access to more transparent and reliable accommodation rates.
 
@@ -141,8 +142,7 @@ In conclusion, the tuned XGBoost model performed well, explaining about 73% of p
 
 ## Deployment
 We deployed the tuned XGBoost model on Streamlit, building an easy-to-use web app that allows users to predict Airbnb prices in real time. The tool helps users quickly estimate listing prices, explore key pricing factors, and make informed, data-driven decisions for better market understanding.
-Below is the deployment link:<br>
-[Deployment Streamlit](https://dqklmgcovprk2xwvxh2vty.streamlit.app/)
+
 <p align = 'center'>Deployment</p>
 
 ![Analysis](https://github.com/patsi-dev/Airbnb-Cape-Town-Price-Prediction/blob/ivy/images/Screenshot%20(145).png)
